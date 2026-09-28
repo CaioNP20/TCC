@@ -1,0 +1,30 @@
+* Aumento no número de transações online -> logo tomar mais cuidado
+* O que é uma transação fraudulenta
+* Prevenção é diferente de Detecção
+* Impacto gerado (Econômico/Social) !!! FORNERCER DADOS
+* quantidade de tentativas de fraudes (DADOS)
+* Possivelmente relacionar o PIX com a necessidade de mecanismos de detecção
+* Novos desafios: velocidade da operação, privacidade dos clientes
+* Como Machine Learning pode ser útil nesse caso considerando os desafios
+* Comentar algo sobre padrão dos golpes
+* Tem que ser auditável a decisão tomada pela IA? (não sei se devo incluir isso)
+* Talvez comentar sobre o fluxo que ocorre durante pagamento de comércio eletrônico
+* Crimes cibernéticos
+* Vi um trabalho focado em cartão de crédito, ele acabou detalhando mais sobre seu uso, tipos de fraude que fazem uso dele (ex:phishing) etc, não sei se compensa falar só sobre ele e ainda
+se devo fazer isso na introdução
+------------------------------------------------
+GPT1) 
+* Sobre a 1.2 Justificativa, não sei se entendi a perspectiva acadêmica
+* Sobre a 1.3 Delimitação pretendo utilizar duas bases de dados: IEEE Fraud Detection (aqui as colunas estão "anônimas" vai de V1 - v28 por exemplo) e uma outra que fique mais claro quais são os atributos mais relevantes para detecção e quero utilizar pelo menos 1 ou 2 algoritmos supervisionados e não supervisionados para cada um (existe a possibilidade de eu alterar isso no futuro)
+* Ainda não decidi sobre essa questão de focar ou não no cartão de crédito. Quando eu tiver certeza dos datasets que eu irei usar eu faço as modificações necessárias. Acho que para introdução da para citar da mesma forma que o PIX
+* Tenho dúvida se devo colocar os Trabalhos Relacionados na frente da Fundamentação Teórica pois provavelmente irei escolher os algoritmos que baseado nos trabalhos que eu vi. Nesses trabalhos fizeram uma pesquisa vendo quantos trabalhos usaram algoritmo X,Y,Z
+* Vamos ignorar a questão da auditabilidade por enquanto
+* Falar sobre falso negativo e falso positivo; mudança de comportamento
+------------------------------------------------
+GPT2)
+Tomou decisões importantes:
+* Fundamentação Teórica vem antes de trabalhos relacionados
+* Não se amarrou na questão de cartão de crédito (devo ter certeza disso escolhendo os datasets)
+
+
+#### PF celular BO e GitHub TCC
