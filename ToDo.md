@@ -1,131 +1,119 @@
-gora eu não iria diretamente para a Fundamentação Teórica. Antes, eu fecharia algumas decisões que vão determinar boa parte do restante do TCC.
+# Planejamento Inicial e Decisões Estratégicas para o TCC
 
-Eu seguiria esta ordem:
+Antes de prosseguir diretamente para a elaboração da Fundamentação Teórica, é necessário alinhar decisões estratégicas que orientarão todo o desenvolvimento metodológico e experimental do trabalho.
 
-1. Definir os datasets
+---
 
-Esse é o próximo passo mais importante.
+## 1. Definir os Datasets
 
-Você já decidiu que quer:
+Este é o próximo passo fundamental.
 
-IEEE-CIS Fraud Detection;
-uma segunda base com atributos mais interpretáveis;
-comparar abordagens supervisionadas e não supervisionadas.
+### Decisões prévias:
+* Utilização da base **IEEE-CIS Fraud Detection**;
+* Definição de uma **segunda base de dados** com atributos mais interpretáveis;
+* Comparação entre abordagens **supervisionadas** e **não supervisionadas**.
 
-Agora precisamos definir a segunda base e verificar, para ambas:
+### Aspectos a verificar em ambas as bases:
+* Quantidade total de registros;
+* Quantidade e proporção entre as classes (casos de fraude vs. não-fraude);
+* Quantidade e significado dos atributos (numéricos e categóricos);
+* Presença de valores ausentes (*missing values*);
+* Existência de identificadores/chaves primárias;
+* Possibilidade de vazamento de dados (*data leakage*);
+* Adequação da base aos algoritmos que serão testados.
 
-quantidade de registros;
-quantidade de fraudes;
-proporção entre classes;
-quantidade e significado dos atributos;
-valores ausentes;
-atributos categóricos/numéricos;
-existência de identificadores;
-possibilidade de vazamento de dados (data leakage);
-se a base é adequada para os algoritmos que você pretende testar.
+> **Nota:** Posteriormente, será estruturada uma tabela comparativa de caracterização dos *datasets*.
 
-Eu faria uma tabela de caracterização das bases no TCC posteriormente.
+---
 
-2. Fazer uma pesquisa bibliográfica direcionada
+## 2. Pesquisa Bibliográfica Direcionada
 
-Depois dos datasets, eu faria a pesquisa dos trabalhos relacionados.
+Levantamento dos trabalhos relacionados com o objetivo central de responder:
 
-Mas não simplesmente "ler artigos sobre fraude". A pesquisa deveria responder:
+> **Quais algoritmos estão sendo utilizados para detecção de fraude e como eles estão sendo avaliados?**
 
-Quais algoritmos estão sendo utilizados para detecção de fraude e como eles estão sendo avaliados?
+### Estrutura para registro de cada artigo lido:
 
-Para cada trabalho, registre pelo menos:
+| Informação | Exemplo |
+| :--- | :--- |
+| **Autor / Ano** | Silva et al. (2024) |
+| **Dataset** | Credit Card Fraud |
+| **Tipo** | Supervisionado |
+| **Algoritmo** | Random Forest |
+| **Pré-processamento** | SMOTE |
+| **Métricas** | Precision, Recall, F1 |
+| **Resultado** | ... |
+| **Observações** | ... |
 
-Informação	Exemplo
-Autor/ano	Silva et al. (2024)
-Dataset	Credit Card Fraud
-Tipo	Supervisionado
-Algoritmo	Random Forest
-Pré-processamento	SMOTE
-Métricas	Precision, Recall, F1
-Resultado	...
-Observações	...
+---
 
-Isso vai te ajudar diretamente a escolher os algoritmos.
+## 3. Definir os Algoritmos
 
-3. Definir os algoritmos
+A seleção final dos algoritmos será respaldada pela revisão bibliográfica e pelas características das bases de dados. 
 
-Só depois da pesquisa bibliográfica eu fecharia os algoritmos.
+### Exemplos de abordagens sob análise:
 
-Como você quer pelo menos 1–2 supervisionados e 1–2 não supervisionados, poderíamos chegar, por exemplo, a algo conceitualmente assim:
+* **Supervisionados:**
+  * Logistic Regression
+  * Random Forest
+  * XGBoost
 
-Supervisionados
+* **Não Supervisionados:**
+  * Isolation Forest
+  * One-Class SVM
+  * K-Means
 
-Logistic Regression
-Random Forest
-XGBoost
+> **Atenção:** Algoritmos não supervisionados exigirão uma consideração especial na metodologia: a variável alvo (rótulo de fraude) será utilizada exclusivamente na etapa de **avaliação**, sem ser fornecida durante o treinamento do modelo.
 
-Não supervisionados
+---
 
-Isolation Forest
-One-Class SVM
-K-Means
+## 4. Definir Exatamente a Pergunta de Pesquisa
 
-Não estou dizendo que esses serão os escolhidos. A ideia é deixar a literatura e as características dos datasets guiarem a seleção.
+Formalização do problema central a ser respondido ao longo do trabalho:
 
-Um ponto importante: algoritmos não supervisionados podem exigir uma discussão diferente, porque "fraude" normalmente é uma classe conhecida nos datasets. Precisamos definir cuidadosamente como vamos utilizar os rótulos apenas para avaliação, sem fornecê-los ao algoritmo durante o treinamento.
+> *"Como diferentes algoritmos de aprendizado de máquina supervisionado e não supervisionado se comportam na detecção de transações fraudulentas em bases de dados com características distintas?"*
 
-4. Definir exatamente a pergunta de pesquisa
+---
 
-Depois disso, eu formalizaria o problema central do TCC.
+## 5. Estruturar a Fundamentação Teórica
 
-Algo próximo de:
+Proposta de estrutura preliminar para o Capítulo 2:
 
-Como diferentes algoritmos de aprendizado de máquina supervisionado e não supervisionado se comportam na detecção de transações fraudulentas em bases de dados com características distintas?
-
-Podemos refiná-la depois.
-
-Isso é importante porque cada parte do TCC precisa responder a essa pergunta.
-
-5. Estruturar a Fundamentação Teórica
-
-Só então eu começaria a escrever o capítulo 2.
-
-Eu sugiro inicialmente:
-
+```
 2 FUNDAMENTAÇÃO TEÓRICA
+│
+├── 2.1 Transações financeiras e pagamentos digitais
+├── 2.2 Fraudes em transações financeiras
+├── 2.3 Detecção de fraudes
+│   ├── 2.3.1 Prevenção e detecção
+│   ├── 2.3.2 Falsos positivos e falsos negativos
+│   ├── 2.3.3 Desbalanceamento de classes
+│   └── 2.3.4 Mudança de padrões
+├── 2.4 Aprendizado de máquina
+│   ├── 2.4.1 Aprendizado supervisionado
+│   └── 2.4.2 Aprendizado não supervisionado
+├── 2.5 Algoritmos de classificação
+│   ├── 2.5.1 [Algoritmo Definido A]
+│   └── 2.5.2 [Algoritmo Definido B]
+├── 2.6 Detecção de anomalias
+│   ├── 2.6.1 [Algoritmo Definido C]
+│   └── 2.6.2 [Algoritmo Definido D]
+└── 2.7 Métricas de avaliação
+    ├── 2.7.1 Matriz de confusão
+    ├── 2.7.2 Precision
+    ├── 2.7.3 Recall
+    ├── 2.7.4 F1-score
+    ├── 2.7.5 ROC-AUC
+    └── 2.7.6 PR-AUC
+```
 
-2.1 Transações financeiras e pagamentos digitais
-2.2 Fraudes em transações financeiras
-2.3 Detecção de fraudes
-    2.3.1 Prevenção e detecção
-    2.3.2 Falsos positivos e falsos negativos
-    2.3.3 Desbalanceamento de classes
-    2.3.4 Mudança de padrões
-2.4 Aprendizado de máquina
-    2.4.1 Aprendizado supervisionado
-    2.4.2 Aprendizado não supervisionado
-2.5 Algoritmos de classificação
-    2.5.1 [Algoritmo]
-    2.5.2 [Algoritmo]
-2.6 Detecção de anomalias
-    2.6.1 [Algoritmo]
-    2.6.2 [Algoritmo]
-2.7 Métricas de avaliação
-    2.7.1 Matriz de confusão
-    2.7.2 Precision
-    2.7.3 Recall
-    2.7.4 F1-score
-    2.7.5 ROC-AUC
-    2.7.6 PR-AUC
+---
 
-Os algoritmos só entram depois de decidirmos quais serão.
+## 6. Trabalhos Relacionados e Justificativa dos Modelos
 
-6. Depois: Trabalhos Relacionados
+Conexão entre a revisão da literatura e o desenho experimental através da análise da frequência de uso dos algoritmos.
 
-Aqui entraria aquela ideia que você teve de analisar a frequência de utilização dos algoritmos.
-
-Podemos fazer algo bem interessante:
-
-Pesquisa bibliográfica → tabela dos trabalhos → frequência dos algoritmos → justificativa da seleção dos seus algoritmos.
-
-Por exemplo:
-
+```
 Artigos encontrados
         ↓
 Seleção dos trabalhos relevantes
@@ -139,5 +127,4 @@ Frequência de utilização
 Características dos algoritmos
         ↓
 Seleção dos modelos do TCC
-
-Isso cria uma conexão muito boa entre o capítulo 3 e o capítulo experimental.
+```
