@@ -1,0 +1,11 @@
+Dataset1: nome: Credit Card Transactions Fraud Detection Dataset
+link: https://www.kaggle.com/datasets/kartik2112/fraud-detection
+
+Dataset2: nome: Synthetic Financial Datasets For Fraud Detection
+link: https://www.kaggle.com/datasets/ealaxi/paysim1
+
+Dataset3: nome: Credit Card Fraud Detection
+link: https://www.kaggle.com/mlg-ulb/creditcardfraud
+
+Dataset4: nome: IEEE-CIS Fraud Detection
+link: https://www.kaggle.com/c/ieee-fraud-detection
