@@ -19,10 +19,3 @@ A\_02:
 * Tópico de métricas
 * Falar sobre os algoritmos
 * Tópico para pré-processamento; coleta de dados; seleção de atributos; desbalanceamento de variáveis, normalização de variáveis???
-
-
-
-A\_05:
-
-* 
-
